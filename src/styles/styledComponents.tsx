@@ -26,30 +26,52 @@ export const Container = styled.div`
 `
 
 export const IntroContainer = styled.section`
+  min-height: 6.1875rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 0.88rem;
 
-  @media (min-width: 500px) {
+  @media (min-width: 760px) {
     flex-direction: row;
+    height: 14.185rem;
   }
 `
 
 export const InfoContainer = styled.div`
-  height: 5.25rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  line-height: 2.4rem;
+  text-align: center;
 
   & h3 {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.125rem;
+    font-weight: 600;
   }
 
   & p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 300;
+  }
+
+  @media (min-width: 760px) {
+    align-items: start;
+    flex: 3;
+    line-height: 3.5rem;
+
+    & h1 {
+      font-size: 2.8125rem;
+    }
+
+    & h3 {
+      font-size: 1.5rem;
+    }
+
+    & p {
+      font-size: 1rem;
+    }
   }
 `
 
@@ -64,10 +86,15 @@ export const VolleyballImage = styled.div`
     height: 3.38769rem;
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 760px) {
+    align-items: flex-end;
+    flex: 1;
+
     & img {
-      width: 12.9375rem;
-      height: 11.6875rem;
+      width: 9.375rem;
+      height: 8.46919rem;
     }
   }
 `
+
+export const CardsContainer = styled.div``
