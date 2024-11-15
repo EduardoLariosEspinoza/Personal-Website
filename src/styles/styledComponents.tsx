@@ -97,4 +97,14 @@ export const VolleyballImage = styled.div`
   }
 `
 
-export const CardsContainer = styled.div``
+export const CardsContainer = styled.section`
+  margin-top: 4rem;
+
+  & h1 {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 500px) {
+    margin: 0;
+  }
+`

@@ -1,4 +1,6 @@
-import { Container, Nav, IntroContainer, InfoContainer, VolleyballImage } from './styles/styledComponents'
+import ProjectCard from './components/ProjectCard'
+import { projects } from "./data/projects.ts"
+import { Container, Nav, IntroContainer, InfoContainer, VolleyballImage, CardsContainer } from './styles/styledComponents'
 import CV from '/CV_en-Nov-2024.pdf'
 import volleyBall from './assets/volleyball-01_483-430-min.png'
 
@@ -25,6 +27,16 @@ function App() {
           <img src={volleyBall} alt="Volleyball Ball" />
         </VolleyballImage>
       </IntroContainer>
+
+      <CardsContainer>
+        <h1>Selected Work</h1>
+        {projects.map((project) => {
+          return (
+            <ProjectCard project={project} />
+          )
+        })}
+      </CardsContainer>
+      
     </Container>
   )
 }
