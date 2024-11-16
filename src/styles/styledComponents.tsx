@@ -12,6 +12,7 @@ export const Nav = styled.nav`
     color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: .75rem;
 
     @media (min-width: 500px) {
       font-size: 1.25rem;
@@ -98,7 +99,10 @@ export const VolleyballImage = styled.div`
 `
 
 export const CardsContainer = styled.section`
+  display: flex;
+  flex-direction: column;
   margin-top: 4rem;
+  gap: 1.25rem;
 
   & h1 {
     font-size: 1.25rem;
@@ -107,4 +111,10 @@ export const CardsContainer = styled.section`
   @media (min-width: 500px) {
     margin: 0;
   }
+`
+
+export const Cards = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 `

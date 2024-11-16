@@ -1,6 +1,6 @@
 import ProjectCard from './components/ProjectCard'
 import { projects } from "./data/projects.ts"
-import { Container, Nav, IntroContainer, InfoContainer, VolleyballImage, CardsContainer } from './styles/styledComponents'
+import { Container, Nav, IntroContainer, InfoContainer, VolleyballImage, CardsContainer, Cards } from './styles/styledComponents'
 import CV from '/CV_en-Nov-2024.pdf'
 import volleyBall from './assets/volleyball-01_483-430-min.png'
 
@@ -11,6 +11,9 @@ function App() {
       <Nav>
         <div>
           <a href={CV} target='_blank'>Discover My CV</a>
+        </div>
+        <div>
+          <a href="https://github.com/EduardoLariosEspinoza/Personal-Website" target='_blank'>See This Repo</a>
         </div>
         <div>
           <a href="#contact">Get In Touch</a>
@@ -30,11 +33,13 @@ function App() {
 
       <CardsContainer>
         <h1>Selected Work</h1>
-        {projects.map((project) => {
-          return (
-            <ProjectCard project={project} />
-          )
-        })}
+        <Cards>
+          {projects.map((project) => {
+            return (
+              <ProjectCard project={project} />
+            )
+          })}
+        </Cards>
       </CardsContainer>
       
     </Container>
