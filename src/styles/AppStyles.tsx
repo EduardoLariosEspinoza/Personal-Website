@@ -99,6 +99,7 @@ export const VolleyballImage = styled.div`
 `
 
 export const CardsContainer = styled.section`
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
