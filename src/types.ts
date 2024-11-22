@@ -1,12 +1,13 @@
 
-export interface Projects {
+export interface Project {
   title: string;
   description: string;
   img: string;
-  repoUrl: string;
+  repoUrl: string[];
   webUrl: string;
+  isAvailable: boolean;
 }
 
 export interface ProjectCardProps {
-  project: Projects;
+  project: Project;
 }

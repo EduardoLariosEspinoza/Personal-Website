@@ -2,7 +2,7 @@ import ProjectCard from './components/ProjectCard'
 import { projects } from "./data/projects.ts"
 import { Container, Nav, IntroContainer, InfoContainer, VolleyballImage, CardsContainer, Cards } from './styles/AppStyles.tsx'
 import CV from '/CV_en-Nov-2024.pdf'
-import volleyBall from './assets/volleyball-01_483-430-min.png'
+import volleyBall from './assets/images/volleyball-01_483-430-min.png'
 
 function App() {
 
