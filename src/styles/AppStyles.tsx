@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const Nav = styled.nav`
+export const Nav = styled.nav<{ isModalOpen: boolean }>`
   background: #121725;
   height: 5rem;
   width: 100%;
@@ -8,36 +8,44 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
 
+  ${({ isModalOpen }) => isModalOpen && "opacity: 0.2;"}
+  ${({ isModalOpen }) => isModalOpen && "transition: opacity 0.3s ease;"}
+
   & a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: .75rem;
+    font-size: 0.75rem;
 
     @media (min-width: 500px) {
       font-size: 1.25rem;
     }
   }
-`
+`;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-`
+  padding: 0 10%;
+  background: #121725;
+`;
 
-export const IntroContainer = styled.section`
+export const IntroContainer = styled.section<{ isModalOpen: boolean }>`
   min-height: 6.1875rem;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 0.88rem;
 
+  ${({ isModalOpen }) => isModalOpen && "opacity: 0.2;"}
+  ${({ isModalOpen }) => isModalOpen && "transition: opacity 0.3s ease;"}
+
   @media (min-width: 760px) {
     flex-direction: row;
     height: 14.185rem;
   }
-`
+`;
 
 export const InfoContainer = styled.div`
   height: 100%;
@@ -74,7 +82,7 @@ export const InfoContainer = styled.div`
       font-size: 1rem;
     }
   }
-`
+`;
 
 export const VolleyballImage = styled.div`
   width: 100%;
@@ -96,7 +104,7 @@ export const VolleyballImage = styled.div`
       height: 8.46919rem;
     }
   }
-`
+`;
 
 export const CardsContainer = styled.section`
   padding-bottom: 2rem;
@@ -112,10 +120,15 @@ export const CardsContainer = styled.section`
   @media (min-width: 500px) {
     margin: 0;
   }
-`
+`;
+
+export const CardsContainerTitle = styled.h1<{ isModalOpen: boolean }>`
+  ${({ isModalOpen }) => isModalOpen && "opacity: 0.2;"}
+  ${({ isModalOpen }) => isModalOpen && "transition: opacity 0.3s ease;"}
+`;
 
 export const Cards = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-`
+`;

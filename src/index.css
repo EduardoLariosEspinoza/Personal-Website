@@ -10,13 +10,28 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  padding: 0 10%;
-  background: #121725;
-}
-
 h1,
 h2 {
   color: #36d2cf;
   font-family: "Potta One";
+}
+
+@keyframes modalAppear {
+  0% {
+    top: 100%; /* Start off-screen */
+    opacity: 0;
+  }
+  50% {
+    top: 40%; /* Move it to a position (adjust as needed) */
+    opacity: 0.7;
+  }
+  100% {
+    top: 30%; /* Final position */
+    opacity: 1;
+  }
+}
+
+.modal {
+  animation: modalAppear 0.4s ease-out forwards;
+  pointer-events: auto;
 }

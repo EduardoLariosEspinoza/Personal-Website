@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react";
 
 export interface Project {
   title: string;
@@ -10,4 +11,13 @@ export interface Project {
 
 export interface ProjectCardProps {
   project: Project;
+  onClose: () => void;
+  onOpen: MouseEventHandler<HTMLDivElement>;
+  isModalOpen: boolean;
+}
+
+export interface ProjectCardModalProps {
+  project: Project;
+  onClose: () => void;
+  isOpen: boolean;
 }

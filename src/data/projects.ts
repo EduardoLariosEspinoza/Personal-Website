@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: "Flag Trivia Game Web Page",
     description: "This is a responsive web application created with React.js and JavaScript. It uses an API to get data about flags and countries, the API calls are managed by Axios. In this app, you will get a country name and four flags, so you must choose the correct answer.",
-    img: "../assets/images/Flag-Trivia-Game-Web-Page-Image.jpeg",
+    img: "/src/assets/images/Flag-Trivia-Game-Web-Page-Image.jpeg",
     repoUrl: ["https://github.com/EduardoLariosEspinoza/flag-guess-react"],
     webUrl: "https://ephemeral-dasik-253fa8.netlify.app/",
     isAvailable: true,
@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     title: "University Registration Website",
     description: "Website project for the registration and identification of students with disabilities at the University of Colima. A JS Vanilla, HTML, CSS, PHP, MySQL and Apache based portal web that has the intention of being a helpful tool to identify the students of the university that have a disability. This website have verification, roles, a form and reports of the data of the answers.",
-    img: "../assets/images/University-Registration-Website-Img.jpeg",
+    img: "/src/assets/images/University-Registration-Website-Img.jpeg",
     repoUrl: [""],
     webUrl: "",
     isAvailable: false,
@@ -28,7 +28,7 @@ export const projects: Project[] = [
   {
     title: "Full Stack Veterinarian Website",
     description: "This is a website that imitates a veterinarian's site, where you can register your pet for an appointment or where a veterinarian can see their patients. It was developed with Node.js, React.js, MongoDB, Tailwind, and Express. It uses email registration with MailTrap.",
-    img: "../assets/images/Full-Stack-Veterinarian-Website-Img.jpeg",
+    img: "/src/assets/images/Full-Stack-Veterinarian-Website-Img.jpeg",
     repoUrl: ["https://github.com/EduardoLariosEspinoza/apv-frontend", "https://github.com/EduardoLariosEspinoza/apv-backend"],
     webUrl: "https://apv-frontend-i8vy.vercel.app/",
     isAvailable: true,
@@ -36,7 +36,7 @@ export const projects: Project[] = [
   {
     title: "Loan quoter with Vue.js",
     description: "This project receives the information about the loan that you want to obtain and the number of months you want to pay back.",
-    img: "../assets/images/Loan-quoter-with-Vue-Img.jpeg",
+    img: "/src/assets/images/Loan-quoter-with-Vue-Img.jpeg",
     repoUrl: ["https://github.com/EduardoLariosEspinoza/cotizador-prestamos-vue"],
     webUrl: "https://cotizador-prestamos-vue-eduardo.netlify.app/",
     isAvailable: true,
