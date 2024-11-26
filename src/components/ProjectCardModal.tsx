@@ -1,6 +1,8 @@
+import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { ProjectCardModalProps } from "../types";
-import { useEffect, useRef } from "react";
+import cross from "/cross.svg";
+import githubLogo from "/github-logo.png";
 
 const Modal = styled.div`
   position: fixed;
@@ -11,9 +13,29 @@ const Modal = styled.div`
   align-self: center;
   border-radius: 15px;
   border: #ffffff 1px solid;
+`;
+
+const ModalNav = styled.section`
+  width: 100%;
   display: flex;
-  align-items: center;
+  padding: 0.5rem 1rem;
   justify-content: center;
+  position: relative;
+  align-items: center;
+
+  & h4 {
+    display: inline-block;
+  }
+
+  & img {
+    position: absolute;
+    left: 1rem;
+  }
+`;
+
+const ModalImg = styled.img`
+  height: 8rem;
+  border-bottom: 1px solid white;
 `;
 
 function ProjectCardModal({ onClose, project, isOpen }: ProjectCardModalProps) {
@@ -43,7 +65,28 @@ function ProjectCardModal({ onClose, project, isOpen }: ProjectCardModalProps) {
 
   return (
     <Modal onClick={onClose} ref={modalRef} className="modal">
-      {project.title}
+      <ModalNav>
+        <img src={cross} alt="Close" />
+        <h4>{project.title}</h4>
+      </ModalNav>
+
+      <section>
+        <ModalImg src={project.img} alt="" />
+        {project.isAvailable ? (
+          <>
+            <a href={project.webUrl}>Visit the Page!</a>
+            {project.repoUrl.map((repo) => {
+              return (
+                <a href={repo} target="_blank" key={repo.split("/").pop()}>
+                  <img src={githubLogo} alt="" />
+                </a>
+              );
+            })}
+          </>
+        ) : (
+          <p>Unfortunately this project is private and cannot be visited</p>
+        )}
+      </section>
     </Modal>
   );
 }

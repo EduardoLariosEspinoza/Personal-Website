@@ -10,7 +10,10 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <>
-      <Card onClick={isModalOpen ? onClose : onOpen} isModalOpen={isModalOpen}>
+      <Card
+        onClick={isModalOpen ? onClose : onOpen}
+        className={`${isModalOpen ? "modal-active-background" : null}`}
+      >
         <DivImg>
           <Img src={project.img} alt="Screenshot" />
         </DivImg>

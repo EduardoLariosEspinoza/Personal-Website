@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const Nav = styled.nav<{ isModalOpen: boolean }>`
+export const Nav = styled.nav`
   background: #121725;
   height: 5rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  ${({ isModalOpen }) => isModalOpen && "opacity: 0.2;"}
-  ${({ isModalOpen }) => isModalOpen && "transition: opacity 0.3s ease;"}
 
   & a {
     color: white;
@@ -31,15 +28,12 @@ export const Container = styled.div`
   background: #121725;
 `;
 
-export const IntroContainer = styled.section<{ isModalOpen: boolean }>`
+export const IntroContainer = styled.section`
   min-height: 6.1875rem;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 0.88rem;
-
-  ${({ isModalOpen }) => isModalOpen && "opacity: 0.2;"}
-  ${({ isModalOpen }) => isModalOpen && "transition: opacity 0.3s ease;"}
 
   @media (min-width: 760px) {
     flex-direction: row;
@@ -120,11 +114,6 @@ export const CardsContainer = styled.section`
   @media (min-width: 500px) {
     margin: 0;
   }
-`;
-
-export const CardsContainerTitle = styled.h1<{ isModalOpen: boolean }>`
-  ${({ isModalOpen }) => isModalOpen && "opacity: 0.2;"}
-  ${({ isModalOpen }) => isModalOpen && "transition: opacity 0.3s ease;"}
 `;
 
 export const Cards = styled.div`

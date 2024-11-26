@@ -1,13 +1,10 @@
 import styled from "styled-components";
 
-export const Card = styled.div<{ isModalOpen: boolean }>`
+export const Card = styled.div`
   border: 1px solid white;
   width: 100%;
   min-height: 18.19rem;
   height: auto;
-
-  ${({ isModalOpen }) => isModalOpen && "opacity: 0.2;"}
-  ${({ isModalOpen }) => isModalOpen && "transition: opacity 0.3s ease;"}
 
   &:active {
     filter: brightness(50%);

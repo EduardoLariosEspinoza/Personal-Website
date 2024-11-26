@@ -9,7 +9,6 @@ import {
   VolleyballImage,
   CardsContainer,
   Cards,
-  CardsContainerTitle,
 } from "./styles/AppStyles.tsx";
 import CV from "/CV_en-Nov-2024.pdf";
 import volleyBall from "./assets/images/volleyball-01_483-430-min.png";
@@ -25,7 +24,7 @@ function App() {
 
   return (
     <Container>
-      <Nav isModalOpen={isModalOpen}>
+      <Nav className={`${isModalOpen ? "modal-active-background" : null}`}>
         <div>
           <a href={CV} target="_blank">
             Discover My CV
@@ -44,7 +43,9 @@ function App() {
         </div>
       </Nav>
 
-      <IntroContainer isModalOpen={isModalOpen}>
+      <IntroContainer
+        className={`${isModalOpen ? "modal-active-background" : null}`}
+      >
         <InfoContainer>
           <h1>Eduardo Larios Espinoza</h1>
           <h3>Software Engineer</h3>
@@ -56,9 +57,7 @@ function App() {
       </IntroContainer>
 
       <CardsContainer>
-        <CardsContainerTitle isModalOpen={isModalOpen}>
-          Selected Work
-        </CardsContainerTitle>
+        <h1>Selected Work</h1>
         <Cards>
           {projects.map((project) => {
             return (
@@ -67,6 +66,7 @@ function App() {
                 onClose={closeModal}
                 onOpen={openModal}
                 isModalOpen={isModalOpen}
+                key={project.title.replace(/ /g, "-")}
               />
             );
           })}
