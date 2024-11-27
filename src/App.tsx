@@ -15,12 +15,19 @@ import volleyBall from "./assets/images/volleyball-01_483-430-min.png";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [selectedProject, setSelectedProject] = useState<string>();
 
+  const closeModal = () => setIsModalOpen(false);
   const openModal: React.MouseEventHandler<HTMLDivElement> = (event) => {
     event.stopPropagation(); // Only trigger the event linked to its component
+    console.log(
+      event.currentTarget.querySelector("h4")?.textContent?.replace(/ /g, "-")
+    );
+    setSelectedProject(
+      event.currentTarget.querySelector("h4")?.textContent?.replace(/ /g, "-")
+    );
     setIsModalOpen(true);
   };
-  const closeModal = () => setIsModalOpen(false);
 
   return (
     <Container>
@@ -65,6 +72,7 @@ function App() {
                 project={project}
                 onClose={closeModal}
                 onOpen={openModal}
+                selectedProject={selectedProject}
                 isModalOpen={isModalOpen}
                 key={project.title.replace(/ /g, "-")}
               />

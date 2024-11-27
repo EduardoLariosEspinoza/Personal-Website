@@ -4,10 +4,15 @@ import ProjectCardModal from "./ProjectCardModal";
 
 function ProjectCard({
   project,
-  onOpen,
   onClose,
+  onOpen,
+  selectedProject,
   isModalOpen,
 }: ProjectCardProps) {
+  const actualProject = project.title.replace(/ /g, "-");
+
+  console.log(selectedProject);
+
   return (
     <>
       <Card
@@ -23,7 +28,7 @@ function ProjectCard({
         </CardInfo>
       </Card>
 
-      {isModalOpen && (
+      {isModalOpen && selectedProject === actualProject && (
         <ProjectCardModal
           onClose={onClose}
           project={project}

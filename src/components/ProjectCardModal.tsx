@@ -8,15 +8,17 @@ const Modal = styled.div`
   position: fixed;
   top: 28vh;
   width: 92%;
-  height: 30%;
+  height: 20rem;
   background-color: #17264a;
   align-self: center;
   border-radius: 15px;
   border: #ffffff 1px solid;
+  z-index: 1000;
 `;
 
 const ModalNav = styled.section`
   width: 100%;
+  height: 3rem;
   display: flex;
   padding: 0.5rem 1rem;
   justify-content: center;
@@ -33,9 +35,38 @@ const ModalNav = styled.section`
   }
 `;
 
-const ModalImg = styled.img`
-  height: 8rem;
-  border-bottom: 1px solid white;
+const ModalInfo = styled.section`
+  height: 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0 2rem;
+
+  & a {
+    text-decoration: none;
+  }
+
+  & .screenshot {
+    height: 8rem;
+    border-radius: 6px;
+  }
+
+  & span {
+    text-decoration: underline;
+    color: #7ae9ff;
+  }
+
+  & div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  & .github-logo {
+    height: 2rem;
+  }
 `;
 
 function ProjectCardModal({ onClose, project, isOpen }: ProjectCardModalProps) {
@@ -70,23 +101,31 @@ function ProjectCardModal({ onClose, project, isOpen }: ProjectCardModalProps) {
         <h4>{project.title}</h4>
       </ModalNav>
 
-      <section>
-        <ModalImg src={project.img} alt="" />
+      <ModalInfo>
+        <img
+          src={project.img}
+          alt="Project Screenshot"
+          className="screenshot"
+        />
         {project.isAvailable ? (
           <>
-            <a href={project.webUrl}>Visit the Page!</a>
-            {project.repoUrl.map((repo) => {
-              return (
-                <a href={repo} target="_blank" key={repo.split("/").pop()}>
-                  <img src={githubLogo} alt="" />
-                </a>
-              );
-            })}
+            <a href={project.webUrl} target="_blank">
+              Visit The Page <span> Here!</span>
+            </a>
+            <div>
+              {project.repoUrl.map((repo) => {
+                return (
+                  <a href={repo} target="_blank" key={repo.split("/").pop()}>
+                    <img src={githubLogo} alt="" className="github-logo" />
+                  </a>
+                );
+              })}
+            </div>
           </>
         ) : (
           <p>Unfortunately this project is private and cannot be visited</p>
         )}
-      </section>
+      </ModalInfo>
     </Modal>
   );
 }

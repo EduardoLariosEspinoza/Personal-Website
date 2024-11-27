@@ -13,6 +13,7 @@ export interface ProjectCardProps {
   project: Project;
   onClose: () => void;
   onOpen: MouseEventHandler<HTMLDivElement>;
+  selectedProject: string | undefined;
   isModalOpen: boolean;
 }
 
