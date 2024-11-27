@@ -11,8 +11,6 @@ function ProjectCard({
 }: ProjectCardProps) {
   const actualProject = project.title.replace(/ /g, "-");
 
-  console.log(selectedProject);
-
   return (
     <>
       <Card

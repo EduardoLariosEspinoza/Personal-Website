@@ -64,7 +64,9 @@ function App() {
       </IntroContainer>
 
       <CardsContainer>
-        <h1>Selected Work</h1>
+        <h1 className={`${isModalOpen ? "modal-active-background" : null}`}>
+          Selected Work
+        </h1>
         <Cards>
           {projects.map((project) => {
             return (

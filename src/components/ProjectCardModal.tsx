@@ -30,6 +30,7 @@ const ModalNav = styled.section`
   }
 
   & img {
+    width: 1.8rem;
     position: absolute;
     left: 1rem;
   }
@@ -44,18 +45,14 @@ const ModalInfo = styled.section`
   text-align: center;
   padding: 0 2rem;
 
-  & a {
-    text-decoration: none;
-  }
-
   & .screenshot {
     height: 8rem;
     border-radius: 6px;
   }
 
-  & span {
+  & a {
     text-decoration: underline;
-    color: #7ae9ff;
+    color: #36d2cf;
   }
 
   & div {
@@ -95,9 +92,9 @@ function ProjectCardModal({ onClose, project, isOpen }: ProjectCardModalProps) {
   if (!isOpen) return null;
 
   return (
-    <Modal onClick={onClose} ref={modalRef} className="modal">
+    <Modal ref={modalRef} className="modal">
       <ModalNav>
-        <img src={cross} alt="Close" />
+        <img src={cross} alt="Close" onClick={onClose} />
         <h4>{project.title}</h4>
       </ModalNav>
 
@@ -109,9 +106,13 @@ function ProjectCardModal({ onClose, project, isOpen }: ProjectCardModalProps) {
         />
         {project.isAvailable ? (
           <>
-            <a href={project.webUrl} target="_blank">
-              Visit The Page <span> Here!</span>
-            </a>
+            <p>
+              Visit The Page{" "}
+              <a href={project.webUrl} target="_blank">
+                {" "}
+                Here!
+              </a>
+            </p>
             <div>
               {project.repoUrl.map((repo) => {
                 return (
