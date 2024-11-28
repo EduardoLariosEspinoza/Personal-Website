@@ -101,7 +101,6 @@ export const VolleyballImage = styled.div`
 `;
 
 export const CardsContainer = styled.section`
-  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
@@ -119,7 +118,7 @@ export const Cards = styled.div`
 `;
 
 export const AboutContainer = styled.section`
-  margin: 2rem 0;
+  margin: 3rem 0;
 `;
 
 export const AboutInfo = styled.div`
@@ -134,4 +133,10 @@ export const AboutInfo = styled.div`
 
 export const AboutImgDiv = styled.div`
   display: none;
+`;
+
+export const BulletedListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 `;

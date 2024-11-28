@@ -12,6 +12,7 @@ import {
   AboutInfo,
   AboutContainer,
   AboutImgDiv,
+  BulletedListContainer,
 } from "./styles/AppStyles.tsx";
 import CV from "/CV_en-Nov-2024.pdf";
 import volleyBall from "./assets/images/volleyball-01_483-430-min.png";
@@ -105,12 +106,13 @@ function App() {
             <img src={aboutK} alt="" />
           </AboutImgDiv>
         </div>
-        <div>
-          <BulletedList title="Tech Skills" skills={techSills} />
-          <BulletedList title="Soft Skills" skills={softSills} />
-          <BulletedList title="Languages" skills={languages} />
-        </div>
       </AboutContainer>
+
+      <BulletedListContainer>
+        <BulletedList title="Tech Skills" skills={techSills} />
+        <BulletedList title="Soft Skills" skills={softSills} />
+        <BulletedList title="Languages" skills={languages} />
+      </BulletedListContainer>
     </Container>
   );
 }
