@@ -107,10 +107,6 @@ export const CardsContainer = styled.section`
   margin-top: 4rem;
   gap: 1.25rem;
 
-  & h1 {
-    font-size: 1.25rem;
-  }
-
   @media (min-width: 500px) {
     margin: 0;
   }
@@ -120,4 +116,22 @@ export const Cards = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+`;
+
+export const AboutContainer = styled.section`
+  margin: 2rem 0;
+`;
+
+export const AboutInfo = styled.div`
+  & h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  & p {
+    text-align: justify;
+  }
+`;
+
+export const AboutImgDiv = styled.div`
+  display: none;
 `;

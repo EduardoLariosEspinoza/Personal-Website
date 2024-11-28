@@ -16,6 +16,10 @@ h2 {
   font-family: "Potta One";
 }
 
+h2 {
+  font-size: 1.35rem;
+}
+
 @keyframes modalAppear {
   0% {
     top: 100%;
