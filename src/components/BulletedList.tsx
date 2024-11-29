@@ -21,7 +21,7 @@ function BulletedList({ title, skills }: BulletedListProps) {
       <h2>{title}</h2>
       <ul>
         {skills.map((skill) => {
-          return <li>{skill}</li>;
+          return <li key={skill.replace(/[^a-zA-Z0-9\s]/g, "")}>{skill}</li>;
         })}
       </ul>
     </SkillsListContainer>

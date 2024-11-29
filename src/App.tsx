@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import ProjectCard from "./components/ProjectCard";
 import { projects } from "./data/projects.ts";
 import {
@@ -23,6 +24,7 @@ import { languages, softSills, techSills } from "./data/skills.ts";
 function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<string>();
+  const form = useRef<HTMLFormElement>(null);
 
   const closeModal = () => setIsModalOpen(false);
   const openModal: React.MouseEventHandler<HTMLDivElement> = (event) => {
@@ -31,6 +33,29 @@ function App() {
       event.currentTarget.querySelector("h4")?.textContent?.replace(/ /g, "-")
     );
     setIsModalOpen(true);
+  };
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_0qav3e7",
+        "template_ank87uo",
+        form.current,
+        "vhGdLRbz6O8APY2ls"
+      )
+      .then(
+        () => {
+          alert("Email sent successfully!");
+        },
+        (error) => {
+          console.error("Error:", error.text);
+          alert("Failed to send email.");
+        }
+      );
   };
 
   return (
@@ -113,6 +138,24 @@ function App() {
         <BulletedList title="Soft Skills" skills={softSills} />
         <BulletedList title="Languages" skills={languages} />
       </BulletedListContainer>
+
+      <section>
+        <form ref={form} onSubmit={sendEmail}>
+          <label htmlFor="from_name">Name:</label>
+          <input type="text" name="from_name" id="from_name" required />
+
+          <label htmlFor="subject">Subject:</label>
+          <input type="text" name="subject" id="subject" required />
+
+          <label htmlFor="reply_to">Email:</label>
+          <input type="email" name="reply_to" id="reply_to" required />
+
+          <label htmlFor="message">Message:</label>
+          <textarea name="message" id="message" required />
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
     </Container>
   );
 }
