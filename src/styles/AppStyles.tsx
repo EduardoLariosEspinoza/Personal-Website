@@ -140,3 +140,47 @@ export const BulletedListContainer = styled.div`
   flex-direction: column;
   gap: 1.5rem;
 `;
+
+export const FormSection = styled.section`
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
+
+export const EmailForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & input {
+    height: 2.5rem;
+    width: 18rem;
+    border-radius: 1.75rem;
+    background: #2c344b;
+    border: none;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    padding-left: 1rem;
+  }
+
+  & textarea {
+    height: 6rem;
+    width: 18rem;
+    border-radius: 1.75rem;
+    background: #2c344b;
+    border: none;
+    padding: 1rem;
+  }
+
+  & button {
+    width: fit-content;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: black;
+    border-radius: 1.75rem;
+    background: #36d2cf;
+    border: none;
+  }
+`;

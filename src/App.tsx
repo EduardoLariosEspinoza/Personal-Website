@@ -14,6 +14,8 @@ import {
   AboutContainer,
   AboutImgDiv,
   BulletedListContainer,
+  FormSection,
+  EmailForm,
 } from "./styles/AppStyles.tsx";
 import CV from "/CV_en-Nov-2024.pdf";
 import volleyBall from "./assets/images/volleyball-01_483-430-min.png";
@@ -139,8 +141,9 @@ function App() {
         <BulletedList title="Languages" skills={languages} />
       </BulletedListContainer>
 
-      <section>
-        <form ref={form} onSubmit={sendEmail}>
+      <FormSection>
+        <h2>Send Me An Email</h2>
+        <EmailForm ref={form} onSubmit={sendEmail}>
           <label htmlFor="from_name">Name:</label>
           <input type="text" name="from_name" id="from_name" required />
 
@@ -153,9 +156,9 @@ function App() {
           <label htmlFor="message">Message:</label>
           <textarea name="message" id="message" required />
 
-          <button type="submit">Send</button>
-        </form>
-      </section>
+          <button type="submit">Send Email</button>
+        </EmailForm>
+      </FormSection>
     </Container>
   );
 }
