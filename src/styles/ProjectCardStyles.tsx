@@ -39,11 +39,11 @@ export const CardInfo = styled.div`
 
 export const DivImg = styled.div`
   width: 100%;
-  height: 11.125rem;
-  border-bottom: 1px solid white;
+  height: auto;
 `;
 
 export const Img = styled.img`
   width: 100%;
   height: 100%;
+  border-bottom: 1px solid white;
 `;

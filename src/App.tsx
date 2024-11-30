@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ProjectCard from "./components/ProjectCard";
+import BulletedList from "./components/BulletedList.tsx";
+import { languages, softSills, techSills } from "./data/skills.ts";
 import { projects } from "./data/projects.ts";
 import {
   Container,
@@ -14,14 +16,15 @@ import {
   AboutContainer,
   AboutImgDiv,
   BulletedListContainer,
-  FormSection,
+  FormContainer,
   EmailForm,
+  SocialsContainer,
 } from "./styles/AppStyles.tsx";
 import CV from "/CV_en-Nov-2024.pdf";
+import githubLogo from "/github-logo.png";
+import linkedInLogo from "/logo-linkedin.png";
 import volleyBall from "./assets/images/volleyball-01_483-430-min.png";
 import aboutK from "./assets/images/About-Kafka.png";
-import BulletedList from "./components/BulletedList.tsx";
-import { languages, softSills, techSills } from "./data/skills.ts";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -139,9 +142,10 @@ function App() {
         <BulletedList title="Tech Skills" skills={techSills} />
         <BulletedList title="Soft Skills" skills={softSills} />
         <BulletedList title="Languages" skills={languages} />
+        <img src={aboutK} alt="" />
       </BulletedListContainer>
 
-      <FormSection>
+      <FormContainer>
         <h2>Send Me An Email</h2>
         <EmailForm ref={form} onSubmit={sendEmail}>
           <label htmlFor="from_name">Name:</label>
@@ -158,7 +162,15 @@ function App() {
 
           <button type="submit">Send Email</button>
         </EmailForm>
-      </FormSection>
+      </FormContainer>
+
+      <SocialsContainer>
+        <h2>Socials</h2>
+        <div>
+          <img src={linkedInLogo} alt="LinkedIn Logo" />
+          <img src={githubLogo} alt="Github Logo" />
+        </div>
+      </SocialsContainer>
     </Container>
   );
 }

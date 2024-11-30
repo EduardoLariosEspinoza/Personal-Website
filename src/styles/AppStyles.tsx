@@ -14,7 +14,7 @@ export const Nav = styled.nav`
     font-weight: 500;
     font-size: 0.75rem;
 
-    @media (min-width: 500px) {
+    @media (min-width: 660px) {
       font-size: 1.25rem;
     }
   }
@@ -36,8 +36,8 @@ export const IntroContainer = styled.section`
   gap: 0.88rem;
 
   @media (min-width: 760px) {
-    flex-direction: row;
-    height: 14.185rem;
+    margin: 3rem 0;
+    height: 19rem;
   }
 `;
 
@@ -135,13 +135,24 @@ export const AboutImgDiv = styled.div`
   display: none;
 `;
 
-export const BulletedListContainer = styled.div`
+export const BulletedListContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  & img {
+    display: none;
+
+    @media (min-width: 520px) {
+      width: 15rem;
+      display: inline-block;
+      position: absolute;
+      right: 10%;
+    }
+  }
 `;
 
-export const FormSection = styled.section`
+export const FormContainer = styled.section`
   margin: 3rem 0;
   display: flex;
   flex-direction: column;
@@ -151,14 +162,22 @@ export const FormSection = styled.section`
 export const EmailForm = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 
-  & input {
-    height: 2.5rem;
-    width: 18rem;
+  @media (min-width: 520px) {
+    align-items: center;
+  }
+
+  & input,
+  textarea {
+    width: 80%;
     border-radius: 1.75rem;
     background: #2c344b;
     border: none;
+  }
+
+  & input {
+    height: 2.5rem;
     margin-bottom: 1.5rem;
     color: #ffffff;
     padding-left: 1rem;
@@ -166,10 +185,7 @@ export const EmailForm = styled.form`
 
   & textarea {
     height: 6rem;
-    width: 18rem;
-    border-radius: 1.75rem;
-    background: #2c344b;
-    border: none;
+    margin-bottom: 2rem;
     padding: 1rem;
   }
 
@@ -182,5 +198,24 @@ export const EmailForm = styled.form`
     border-radius: 1.75rem;
     background: #36d2cf;
     border: none;
+    align-self: center;
+  }
+`;
+
+export const SocialsContainer = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+
+  & div {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+  }
+
+  & div img {
+    width: 2.5rem;
   }
 `;
