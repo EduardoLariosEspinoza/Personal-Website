@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 0 10%;
+  background: #121725;
+`;
+
 export const Nav = styled.nav`
   background: #121725;
   height: 5rem;
@@ -20,14 +28,6 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 0 10%;
-  background: #121725;
-`;
-
 export const IntroContainer = styled.section`
   min-height: 6.1875rem;
   height: auto;
@@ -36,7 +36,7 @@ export const IntroContainer = styled.section`
   gap: 0.88rem;
 
   @media (min-width: 760px) {
-    margin: 3rem 0;
+    margin: 0 0 3rem;
     height: 19rem;
   }
 `;
@@ -115,6 +115,12 @@ export const Cards = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+
+  @media (min-width: 820px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
 `;
 
 export const AboutContainer = styled.section`
@@ -149,6 +155,15 @@ export const BulletedListContainer = styled.section`
       position: absolute;
       right: 10%;
     }
+
+    @media (min-width: 820px) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 820px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 

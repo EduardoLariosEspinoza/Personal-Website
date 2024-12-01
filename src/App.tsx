@@ -145,7 +145,7 @@ function App() {
         <img src={aboutK} alt="" />
       </BulletedListContainer>
 
-      <FormContainer>
+      <FormContainer id="contact">
         <h2>Send Me An Email</h2>
         <EmailForm ref={form} onSubmit={sendEmail}>
           <label htmlFor="from_name">Name:</label>
