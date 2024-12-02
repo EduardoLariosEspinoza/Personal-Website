@@ -10,8 +10,19 @@ const SkillsListContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
 
+  @media (min-width: 1260px) {
+    gap: 3rem;
+  }
+
   & ul {
     list-style-position: inside;
+  }
+
+  & ul li {
+    @media (min-width: 1260px) {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
   }
 `;
 

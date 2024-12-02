@@ -38,6 +38,12 @@ export const IntroContainer = styled.section`
   @media (min-width: 760px) {
     margin: 0 0 3rem;
     height: 19rem;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1220px) {
+    margin: 0;
+    align-items: center;
   }
 `;
 
@@ -63,6 +69,7 @@ export const InfoContainer = styled.div`
     align-items: start;
     flex: 3;
     line-height: 3.5rem;
+    height: auto;
 
     & h1 {
       font-size: 2.8125rem;
@@ -80,23 +87,31 @@ export const InfoContainer = styled.div`
 
 export const VolleyballImage = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
 
   & img {
     width: 3.75rem;
     height: 3.38769rem;
+
+    @media (min-width: 760px) {
+      width: 9.375rem;
+      height: 8.46919rem;
+    }
+
+    @media (min-width: 1220px) {
+      width: 12rem;
+      height: auto;
+    }
   }
 
   @media (min-width: 760px) {
     align-items: flex-end;
     flex: 1;
+  }
 
-    & img {
-      width: 9.375rem;
-      height: 8.46919rem;
-    }
+  @media (min-width: 1220px) {
+    align-items: flex-start;
   }
 `;
 
@@ -108,6 +123,10 @@ export const CardsContainer = styled.section`
 
   @media (min-width: 500px) {
     margin: 0;
+  }
+
+  @media (min-width: 1220px) {
+    gap: 3rem;
   }
 `;
 
@@ -121,24 +140,62 @@ export const Cards = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
+
+  @media (min-width: 1220px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
 `;
 
 export const AboutContainer = styled.section`
   margin: 3rem 0;
+  width: 100%;
+
+  & > div {
+    @media (min-width: 1220px) {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 `;
 
 export const AboutInfo = styled.div`
+  @media (min-width: 1220px) {
+    width: 40%;
+  }
+
   & h2 {
     margin-bottom: 1.5rem;
+
+    @media (min-width: 1220px) {
+      margin-bottom: 3rem;
+    }
   }
 
   & p {
     text-align: justify;
+
+    @media (min-width: 1220px) {
+      font-size: 1.375rem;
+      font-weight: 300;
+    }
   }
 `;
 
 export const AboutImgDiv = styled.div`
   display: none;
+
+  @media (min-width: 1220px) {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+
+    & img {
+      width: 16rem;
+    }
+  }
 `;
 
 export const BulletedListContainer = styled.section`
@@ -172,6 +229,10 @@ export const FormContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (min-width: 1220px) {
+    gap: 5rem;
+  }
 `;
 
 export const EmailForm = styled.form`
@@ -183,12 +244,27 @@ export const EmailForm = styled.form`
     align-items: center;
   }
 
+  @media (min-width: 1220px) {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: auto;
+    row-gap: 2rem;
+  }
+
+  & label {
+    @media (min-width: 1220px) {
+      font-size: 1rem;
+      align-self: flex-start;
+    }
+  }
+
   & input,
   textarea {
     width: 80%;
     border-radius: 1.75rem;
     background: #2c344b;
     border: none;
+    max-width: 82rem;
   }
 
   & input {
@@ -196,12 +272,21 @@ export const EmailForm = styled.form`
     margin-bottom: 1.5rem;
     color: #ffffff;
     padding-left: 1rem;
+
+    @media (min-width: 1220px) {
+      height: 3rem;
+      font-size: 1rem;
+    }
   }
 
   & textarea {
     height: 6rem;
     margin-bottom: 2rem;
     padding: 1rem;
+
+    @media (min-width: 1220px) {
+      height: 8rem;
+    }
   }
 
   & button {
@@ -214,6 +299,12 @@ export const EmailForm = styled.form`
     background: #36d2cf;
     border: none;
     align-self: center;
+
+    @media (min-width: 1220px) {
+      font-size: 1rem;
+      grid-column: 1 / 3;
+      margin-top: 2rem;
+    }
   }
 `;
 
@@ -224,13 +315,27 @@ export const SocialsContainer = styled.section`
   gap: 1.5rem;
   margin-bottom: 3rem;
 
+  @media (min-width: 1220px) {
+    gap: 3rem;
+    align-items: center;
+  }
+
   & div {
     width: 100%;
     display: flex;
     gap: 3rem;
+
+    @media (min-width: 1220px) {
+      gap: 5rem;
+      justify-content: center;
+    }
   }
 
   & div img {
     width: 2.5rem;
+
+    @media (min-width: 1220px) {
+      width: 3rem;
+    }
   }
 `;

@@ -34,6 +34,10 @@ export const CardInfo = styled.div`
     font-weight: 300;
     line-height: 1.125rem;
     text-align: justify;
+
+    @media (min-width: 1260px) {
+      font-size: 0.75rem;
+    }
   }
 `;
 

@@ -17,6 +17,12 @@ export const Modal = styled.div`
     left: 50%;
     transform: translate(-50%, 50%);
   }
+
+  @media (min-width: 1220px) {
+    width: 40rem;
+    height: 25rem;
+    transform: translate(-50%, -10%);
+  }
 `;
 
 export const ModalNav = styled.section`
@@ -28,14 +34,26 @@ export const ModalNav = styled.section`
   position: relative;
   align-items: center;
 
+  @media (min-width: 1220px) {
+    height: 5rem;
+  }
+
   & h4 {
     display: inline-block;
+
+    @media (min-width: 1220px) {
+      font-size: 1.25rem;
+    }
   }
 
   & img {
     width: 1.8rem;
     position: absolute;
     left: 1rem;
+
+    @media (min-width: 1220px) {
+      width: 2rem;
+    }
   }
 `;
 
@@ -48,9 +66,24 @@ export const ModalInfo = styled.section`
   text-align: center;
   padding: 0 2rem;
 
+  @media (min-width: 1220px) {
+    height: 20rem;
+    justify-content: space-around;
+  }
+
   & .screenshot {
     height: 8rem;
     border-radius: 6px;
+
+    @media (min-width: 1220px) {
+      height: 10rem;
+    }
+  }
+
+  & p {
+    @media (min-width: 1220px) {
+      font-size: 1rem;
+    }
   }
 
   & a {
@@ -66,5 +99,9 @@ export const ModalInfo = styled.section`
 
   & .github-logo {
     height: 2rem;
+
+    @media (min-width: 1220px) {
+      height: 3rem;
+    }
   }
 `;
