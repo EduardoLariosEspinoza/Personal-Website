@@ -9,6 +9,17 @@ export const Card = styled.div`
   &:active {
     filter: brightness(50%);
   }
+
+  &:hover {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    top: -1rem;
+    left: -1rem;
+    background-color: black;
+    filter: brightness(70%);
+    /* border: 10px #36d2cf solid; */
+  }
 `;
 
 export const CardInfo = styled.div`

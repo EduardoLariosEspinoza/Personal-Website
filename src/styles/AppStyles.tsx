@@ -222,6 +222,11 @@ export const BulletedListContainer = styled.section`
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: 1220px) {
+    justify-content: flex-end;
+    gap: 10%;
+  }
 `;
 
 export const FormContainer = styled.section`
@@ -232,6 +237,7 @@ export const FormContainer = styled.section`
 
   @media (min-width: 1220px) {
     gap: 5rem;
+    margin: 0;
   }
 `;
 
@@ -305,6 +311,11 @@ export const EmailForm = styled.form`
       grid-column: 1 / 3;
       margin-top: 2rem;
     }
+  }
+
+  & button:hover {
+    cursor: pointer;
+    background: #b1fcfb;
   }
 `;
 

@@ -10,6 +10,9 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+}
+
 h1,
 h2 {
   color: #36d2cf;
@@ -43,6 +46,7 @@ h2 {
 .modal-active-background {
   opacity: 0.2;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 1260px) {

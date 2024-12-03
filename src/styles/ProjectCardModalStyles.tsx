@@ -10,12 +10,13 @@ export const Modal = styled.div`
   border-radius: 15px;
   border: #ffffff 1px solid;
   z-index: 1000;
+  pointer-events: auto;
 
   @media (min-width: 820px) {
     width: 35rem;
     border-width: 2px;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -10%);
   }
 
   @media (min-width: 1220px) {
@@ -54,6 +55,10 @@ export const ModalNav = styled.section`
     @media (min-width: 1220px) {
       width: 2rem;
     }
+  }
+
+  & img:hover {
+    cursor: pointer;
   }
 `;
 

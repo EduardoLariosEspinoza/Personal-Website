@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ProjectCard from "./components/ProjectCard";
 import BulletedList from "./components/BulletedList.tsx";
@@ -55,6 +55,7 @@ function App() {
       .then(
         () => {
           alert("Email sent successfully!");
+          form.current?.reset();
         },
         (error) => {
           console.error("Error:", error.text);
@@ -62,6 +63,18 @@ function App() {
         }
       );
   };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isModalOpen]);
 
   return (
     <Container>
@@ -117,7 +130,9 @@ function App() {
         </Cards>
       </CardsContainer>
 
-      <AboutContainer>
+      <AboutContainer
+        className={`${isModalOpen ? "modal-active-background" : null}`}
+      >
         <div>
           <AboutInfo>
             <h2>About Me</h2>
@@ -138,14 +153,19 @@ function App() {
         </div>
       </AboutContainer>
 
-      <BulletedListContainer>
+      <BulletedListContainer
+        className={`${isModalOpen ? "modal-active-background" : null}`}
+      >
         <BulletedList title="Tech Skills" skills={techSills} />
         <BulletedList title="Soft Skills" skills={softSills} />
         <BulletedList title="Languages" skills={languages} />
         <img src={aboutK} alt="" />
       </BulletedListContainer>
 
-      <FormContainer id="contact">
+      <FormContainer
+        id="contact"
+        className={`${isModalOpen ? "modal-active-background" : null}`}
+      >
         <h2>Send Me An Email</h2>
         <EmailForm ref={form} onSubmit={sendEmail}>
           <label htmlFor="from_name">Name:</label>
@@ -164,11 +184,20 @@ function App() {
         </EmailForm>
       </FormContainer>
 
-      <SocialsContainer>
+      <SocialsContainer
+        className={`${isModalOpen ? "modal-active-background" : null}`}
+      >
         <h2>Socials</h2>
         <div>
-          <img src={linkedInLogo} alt="LinkedIn Logo" />
-          <img src={githubLogo} alt="Github Logo" />
+          <a
+            href="https://www.linkedin.com/in/eduardo-larios-espinoza-216185242/"
+            target="_blank"
+          >
+            <img src={linkedInLogo} alt="LinkedIn Logo" />
+          </a>
+          <a href="https://github.com/EduardoLariosEspinoza" target="_blank">
+            <img src={githubLogo} alt="Github Logo" />
+          </a>
         </div>
       </SocialsContainer>
     </Container>
