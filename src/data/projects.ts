@@ -51,4 +51,13 @@ export const projects: Project[] = [
     webUrl: "https://cotizador-prestamos-vue-eduardo.netlify.app/",
     isAvailable: true,
   },
+  {
+    title: "React.js Veterinarian Website",
+    description:
+      "TypeScript React project, which simulates a veterinarian page where you can register the information about you, your pet, and the appointment.",
+    img: "/src/assets/images/Vet-Page-React.jpeg",
+    repoUrl: ["https://github.com/EduardoLariosEspinoza/admin-pacientes-ts"],
+    webUrl: "https://graceful-truffle-029a4b.netlify.app/",
+    isAvailable: true,
+  },
 ];

@@ -73,6 +73,7 @@ export const InfoContainer = styled.div`
 
     & h1 {
       font-size: 2.8125rem;
+      text-align: left;
     }
 
     & h3 {

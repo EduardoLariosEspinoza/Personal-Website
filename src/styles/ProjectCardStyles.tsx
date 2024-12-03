@@ -31,6 +31,10 @@ export const CardInfo = styled.div`
   align-items: center;
   gap: 0.5rem;
 
+  @media (min-width: 1220px) {
+    padding-top: 1rem;
+  }
+
   & h4 {
     color: #36d2cf;
     font-size: 1rem;
@@ -46,7 +50,7 @@ export const CardInfo = styled.div`
     line-height: 1.125rem;
     text-align: justify;
 
-    @media (min-width: 1260px) {
+    @media (min-width: 1220px) {
       font-size: 0.75rem;
     }
   }
@@ -55,6 +59,10 @@ export const CardInfo = styled.div`
 export const DivImg = styled.div`
   width: 100%;
   height: auto;
+
+  @media (min-width: 1220px) {
+    height: 12vw;
+  }
 `;
 
 export const Img = styled.img`
