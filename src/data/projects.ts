@@ -10,7 +10,7 @@ export const projects: Project[] = [
   {
     title: "Portfolio Website",
     description:
-      "A responsive website portfolio that was developed with React.js and TypeScript. The styles were added with the Styled-Components tool. It highlights my most relevant skills and projects.",
+      "A responsive portfolio website designed and developed using React.js and TypeScript, with styling implemented through the Styled-Components library. The site showcases my key technical skills and highlights a selection of my most significant projects.",
     img: PersonalImg,
     repoUrl: ["https://github.com/EduardoLariosEspinoza/Personal-Website"],
     webUrl: "",
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     title: "Flag Trivia Game Web Page",
     description:
-      "This is a responsive web application created with React.js and JavaScript. It uses an API to get data about flags and countries, the API calls are managed by Axios. In this app, you will get a country name and four flags, so you must choose the correct answer.",
+      "This responsive web application was developed using React.js and JavaScript. It integrates with an API to retrieve information about countries and their flags, with API requests efficiently managed through Axios. The application presents a country name along with four flag options, challenging users to select the correct match.",
     img: FlagImg,
     repoUrl: ["https://github.com/EduardoLariosEspinoza/flag-guess-react"],
     webUrl: "https://ephemeral-dasik-253fa8.netlify.app/",
@@ -28,7 +28,7 @@ export const projects: Project[] = [
   {
     title: "University Registration Website",
     description:
-      "Website project for the registration and identification of students with disabilities at the University of Colima. A JS Vanilla, HTML, CSS, PHP, MySQL and Apache based portal web that has the intention of being a helpful tool to identify the students of the university that have a disability. This website have verification, roles, a form and reports of the data of the answers.",
+      "This project is a web-based portal designed for the registration and identification of students with disabilities at the University of Colima. Built using Vanilla JavaScript, HTML, CSS, PHP, MySQL, and Apache, the platform serves as a valuable tool to assist the university in identifying and supporting students with disabilities. The website includes features such as user authentication, role management, dynamic forms, and comprehensive data reporting based on user responses.",
     img: UniRegImg,
     repoUrl: [""],
     webUrl: "",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     title: "Full Stack Veterinarian Website",
     description:
-      "This is a website that imitates a veterinarian's site, where you can register your pet for an appointment or where a veterinarian can see their patients. It was developed with Node.js, React.js, MongoDB, Tailwind, and Express. It uses email registration with MailTrap.",
+      "This project is a web application simulating a veterinarian's platform, designed to facilitate the registration of pets for appointments and enable veterinarians to manage their patient records. Developed using Node.js, React.js, MongoDB, Tailwind CSS, and Express, the application features email-based registration implemented through MailTrap, ensuring efficient and secure user onboarding.",
     img: VetFullStackImg,
     repoUrl: [
       "https://github.com/EduardoLariosEspinoza/apv-frontend",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     title: "Loan quoter with Vue.js",
     description:
-      "This project receives the information about the loan that you want to obtain and the number of months you want to pay back.",
+      "This Vue.js project is designed to collect and process information regarding loan applications, including the desired loan amount and the repayment period in months.",
     img: LoanVueImg,
     repoUrl: [
       "https://github.com/EduardoLariosEspinoza/cotizador-prestamos-vue",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     title: "React.js Veterinarian Website",
     description:
-      "TypeScript React project, which simulates a veterinarian page where you can register the information about you, your pet, and the appointment.",
+      "A TypeScript and React-based project that simulates a veterinary clinic platform, allowing users to register and edit their information, input pet details, and schedule appointments.",
     img: VetReactImg,
     repoUrl: ["https://github.com/EduardoLariosEspinoza/admin-pacientes-ts"],
     webUrl: "https://graceful-truffle-029a4b.netlify.app/",
