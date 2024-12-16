@@ -9,7 +9,7 @@ import {
   Nav,
   IntroContainer,
   InfoContainer,
-  VolleyballImage,
+  WebDevImage,
   CardsContainer,
   Cards,
   AboutInfo,
@@ -23,7 +23,7 @@ import {
 import CV from "/CV_en-Nov-2024.pdf";
 import githubLogo from "/github-logo.png";
 import linkedInLogo from "/logo-linkedin.png";
-import volleyBall from "./assets/images/volleyball-01_483-430-min.png";
+import webDevImg from "./assets/images/Web-Dev.jpg";
 import aboutK from "./assets/images/About-Kafka.png";
 
 function App() {
@@ -105,9 +105,9 @@ function App() {
           <h3>Software Engineer</h3>
           <p>elariosespinoza2@gmail.com</p>
         </InfoContainer>
-        <VolleyballImage>
-          <img src={volleyBall} alt="Volleyball Ball" />
-        </VolleyballImage>
+        <WebDevImage>
+          <img src={webDevImg} alt="Volleyball Ball" />
+        </WebDevImage>
       </IntroContainer>
 
       <CardsContainer>

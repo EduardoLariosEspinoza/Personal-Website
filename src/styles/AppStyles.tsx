@@ -86,23 +86,24 @@ export const InfoContainer = styled.div`
   }
 `;
 
-export const VolleyballImage = styled.div`
+export const WebDevImage = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
 
   & img {
+    border-radius: 20px;
     width: 3.75rem;
-    height: 3.38769rem;
+    //height: 3.38769rem;
 
     @media (min-width: 760px) {
       width: 9.375rem;
-      height: 8.46919rem;
+      //height: 8.46919rem;
     }
 
     @media (min-width: 1220px) {
-      width: 12rem;
-      height: auto;
+      width: 30vh;
+      //height: auto;
     }
   }
 
