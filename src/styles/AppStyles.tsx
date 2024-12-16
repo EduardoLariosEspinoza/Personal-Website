@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 5rem;
   padding: 0 10%;
   background: #121725;
 `;
@@ -120,7 +120,6 @@ export const WebDevImage = styled.div`
 export const CardsContainer = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
   gap: 1.25rem;
 
   @media (min-width: 500px) {
@@ -200,6 +199,28 @@ export const AboutImgDiv = styled.div`
   }
 `;
 
+export const TechSkillsContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const TechSkillsDiv = styled.div`
+  height: 20rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
+  @media (min-width: 660px) {
+    grid-template-columns: repeat(3, 1fr);
+    height: 30rem;
+  }
+
+  @media (min-width: 1600px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+`;
+
 export const BulletedListContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -226,7 +247,7 @@ export const BulletedListContainer = styled.section`
   }
 
   @media (min-width: 1220px) {
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 10%;
   }
 `;

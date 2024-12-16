@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ProjectCard from "./components/ProjectCard";
 import BulletedList from "./components/BulletedList.tsx";
-import { languages, softSills, techSills } from "./data/skills.ts";
+import { languages, positions, softSills, techSills } from "./data/skills.ts";
 import { projects } from "./data/projects.ts";
 import {
   Container,
@@ -19,12 +19,15 @@ import {
   FormContainer,
   EmailForm,
   SocialsContainer,
+  TechSkillsDiv,
+  TechSkillsContainer,
 } from "./styles/AppStyles.tsx";
 import CV from "/CV_en-Nov-2024.pdf";
 import githubLogo from "/github-logo.png";
 import linkedInLogo from "/logo-linkedin.png";
 import webDevImg from "./assets/images/Web-Dev.jpg";
 import aboutK from "./assets/images/About-Kafka.png";
+import TechSkill from "./components/TechSkill.tsx";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -153,12 +156,21 @@ function App() {
         </div>
       </AboutContainer>
 
+      <TechSkillsContainer>
+        <h2>Tech Skills</h2>
+        <TechSkillsDiv>
+          {techSills.map((skill) => {
+            return <TechSkill tSkill={skill} key={skill.skill} />;
+          })}
+        </TechSkillsDiv>
+      </TechSkillsContainer>
+
       <BulletedListContainer
         className={`${isModalOpen ? "modal-active-background" : null}`}
       >
-        <BulletedList title="Tech Skills" skills={techSills} />
         <BulletedList title="Soft Skills" skills={softSills} />
         <BulletedList title="Languages" skills={languages} />
+        <BulletedList title="Main Roles" skills={positions} />
         <img src={aboutK} alt="" />
       </BulletedListContainer>
 
