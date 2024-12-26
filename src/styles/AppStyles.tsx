@@ -194,7 +194,9 @@ export const AboutImgDiv = styled.div`
     justify-content: center;
 
     & img {
-      width: 16rem;
+      height: 30vh;
+      align-self: center;
+      border-radius: 15px;
     }
   }
 `;
@@ -224,22 +226,7 @@ export const TechSkillsDiv = styled.div`
 export const BulletedListContainer = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-
-  & img {
-    display: none;
-
-    @media (min-width: 520px) {
-      width: 15rem;
-      display: inline-block;
-      position: absolute;
-      right: 10%;
-    }
-
-    @media (min-width: 820px) {
-      display: none;
-    }
-  }
+  gap: 3rem;
 
   @media (min-width: 820px) {
     flex-direction: row;

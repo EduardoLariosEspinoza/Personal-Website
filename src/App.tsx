@@ -26,7 +26,7 @@ import CV from "/CV_en-Nov-2024.pdf";
 import githubLogo from "/github-logo.png";
 import linkedInLogo from "/logo-linkedin.png";
 import webDevImg from "./assets/images/Web-Dev.jpg";
-import aboutK from "./assets/images/About-Kafka.png";
+import aboutImg from "./assets/images/javascript.jpg";
 import TechSkill from "./components/TechSkill.tsx";
 
 function App() {
@@ -151,7 +151,7 @@ function App() {
             </p>
           </AboutInfo>
           <AboutImgDiv>
-            <img src={aboutK} alt="" />
+            <img src={aboutImg} alt="" />
           </AboutImgDiv>
         </div>
       </AboutContainer>
@@ -171,7 +171,6 @@ function App() {
         <BulletedList title="Soft Skills" skills={softSills} />
         <BulletedList title="Languages" skills={languages} />
         <BulletedList title="Main Roles" skills={positions} />
-        <img src={aboutK} alt="" />
       </BulletedListContainer>
 
       <FormContainer
