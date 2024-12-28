@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ProjectCard from "./components/ProjectCard";
 import BulletedList from "./components/BulletedList.tsx";
+import TechSkill from "./components/TechSkill.tsx";
+import Recommendations from "./components/Recommendations.tsx";
 import { languages, positions, softSills, techSills } from "./data/skills.ts";
 import { projects } from "./data/projects.ts";
 import {
@@ -21,13 +23,13 @@ import {
   SocialsContainer,
   TechSkillsDiv,
   TechSkillsContainer,
+  RecommendationsContainer,
 } from "./styles/AppStyles.tsx";
 import CV from "/CV_en-Nov-2024.pdf";
 import githubLogo from "/github-logo.png";
 import linkedInLogo from "/logo-linkedin.png";
 import webDevImg from "./assets/images/Web-Dev.jpg";
 import aboutImg from "./assets/images/javascript.jpg";
-import TechSkill from "./components/TechSkill.tsx";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -172,6 +174,11 @@ function App() {
         <BulletedList title="Languages" skills={languages} />
         <BulletedList title="Main Roles" skills={positions} />
       </BulletedListContainer>
+
+      <RecommendationsContainer>
+        <h2>Recommendations</h2>
+        <Recommendations />
+      </RecommendationsContainer>
 
       <FormContainer
         id="contact"

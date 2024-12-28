@@ -239,6 +239,12 @@ export const BulletedListContainer = styled.section`
   }
 `;
 
+export const RecommendationsContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
 export const FormContainer = styled.section`
   margin: 3rem 0;
   display: flex;
