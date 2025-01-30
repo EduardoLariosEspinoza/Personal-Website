@@ -149,7 +149,7 @@ export const Cards = styled.div`
 `;
 
 export const AboutContainer = styled.section`
-  margin: 3rem 0;
+  margin: 0 0 3rem;
   width: 100%;
 
   & > div {
@@ -179,8 +179,8 @@ export const AboutInfo = styled.div`
     text-align: justify;
 
     @media (min-width: 1220px) {
-      font-size: 1.375rem;
-      font-weight: 300;
+      font-size: 1.1rem;
+      font-weight: 400;
     }
   }
 `;
@@ -198,6 +198,36 @@ export const AboutImgDiv = styled.div`
       align-self: center;
       border-radius: 15px;
     }
+  }
+`;
+
+export const ExperiencesContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+
+  & p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+`;
+
+export const ExperiencesDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  @media (min-width: 1220px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6rem;
+    row-gap: 4rem;
   }
 `;
 

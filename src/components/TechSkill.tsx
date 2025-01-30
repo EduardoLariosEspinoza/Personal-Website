@@ -23,7 +23,7 @@ const SkillDiv = styled.div`
   }
 `;
 
-function TechSkill({ tSkill }: TechSkillProps) {
+function TechSkill({ tSkill }: Readonly<TechSkillProps>) {
   return (
     <SkillDiv>
       <img src={tSkill.img} alt="" />

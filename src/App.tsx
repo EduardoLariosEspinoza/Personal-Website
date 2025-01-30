@@ -24,12 +24,15 @@ import {
   TechSkillsDiv,
   TechSkillsContainer,
   RecommendationsContainer,
+  ExperiencesContainer,
+  ExperiencesDiv,
 } from "./styles/AppStyles.tsx";
 import CV from "/CV_en-Nov-2024.pdf";
 import githubLogo from "/github-logo.png";
 import linkedInLogo from "/logo-linkedin.png";
 import webDevImg from "./assets/images/Web-Dev.jpg";
 import aboutImg from "./assets/images/javascript.jpg";
+import TitleTextDiv from "./components/TitleTextDiv.tsx";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -115,26 +118,6 @@ function App() {
         </WebDevImage>
       </IntroContainer>
 
-      <CardsContainer>
-        <h2 className={`${isModalOpen ? "modal-active-background" : null}`}>
-          Selected Work
-        </h2>
-        <Cards>
-          {projects.map((project) => {
-            return (
-              <ProjectCard
-                project={project}
-                onClose={closeModal}
-                onOpen={openModal}
-                selectedProject={selectedProject}
-                isModalOpen={isModalOpen}
-                key={project.title.replace(/ /g, "-")}
-              />
-            );
-          })}
-        </Cards>
-      </CardsContainer>
-
       <AboutContainer
         className={`${isModalOpen ? "modal-active-background" : null}`}
       >
@@ -158,6 +141,71 @@ function App() {
         </div>
       </AboutContainer>
 
+      <RecommendationsContainer>
+        <h2>Recommendations</h2>
+        <Recommendations />
+      </RecommendationsContainer>
+
+      <CardsContainer>
+        <h2 className={`${isModalOpen ? "modal-active-background" : null}`}>
+          Selected Work
+        </h2>
+        <Cards>
+          {projects.map((project) => {
+            return (
+              <ProjectCard
+                project={project}
+                onClose={closeModal}
+                onOpen={openModal}
+                selectedProject={selectedProject}
+                isModalOpen={isModalOpen}
+                key={project.title.replace(/ /g, "-")}
+              />
+            );
+          })}
+        </Cards>
+      </CardsContainer>
+
+      <ExperiencesContainer>
+        <h2>Experiences</h2>
+        <ExperiencesDiv>
+          <div>
+            <TitleTextDiv title="SalesLoft">
+              Here at Salesloft, a leading company in the sales field, I focused
+              on creating, enhancing, and maintaining its service platform. One
+              of 2 developers in charge of the front-end of a critical section
+              of the platform, the one related to automated communication with
+              its customers, a section that thousands of people use daily. Here
+              my primary tools included React.js with TypeScript, and Jest. I
+              collaborated with some experienced and diverse developers, where
+              effective communication was crucial in fulfilling my
+              responsibilities.
+            </TitleTextDiv>
+          </div>
+
+          <div>
+            <TitleTextDiv title="Touch of Tech">
+              I worked with other software engineers, Jr’s and Sr’s, in
+              developing and maintaining React.js applications and Front-End
+              projects. During these months, I learned best practices and worked
+              alongside professional and experienced colleagues.
+            </TitleTextDiv>
+          </div>
+          <div>
+            <TitleTextDiv title="University of Colima">
+              I was a member of the team responsible for managing all systems
+              within the University of Colima. My role involved enhancing,
+              creating, and maintaining the university's websites using a
+              toolset that included JavaScript, HTML, CSS, PHP, React, and
+              MySQL. One notable project I worked on was developing both the
+              front-end and back-end of a website designed to help the
+              University identify students with disabilities who had not been
+              previously accounted for.
+            </TitleTextDiv>
+          </div>
+        </ExperiencesDiv>
+      </ExperiencesContainer>
+
       <TechSkillsContainer>
         <h2>Tech Skills</h2>
         <TechSkillsDiv>
@@ -174,11 +222,6 @@ function App() {
         <BulletedList title="Languages" skills={languages} />
         <BulletedList title="Main Roles" skills={positions} />
       </BulletedListContainer>
-
-      <RecommendationsContainer>
-        <h2>Recommendations</h2>
-        <Recommendations />
-      </RecommendationsContainer>
 
       <FormContainer
         id="contact"
