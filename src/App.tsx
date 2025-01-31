@@ -89,7 +89,7 @@ function App() {
       <Nav className={`${isModalOpen ? "modal-active-background" : null}`}>
         <div>
           <a href={CV} target="_blank">
-            Discover My CV
+            My résume
           </a>
         </div>
         <div>
@@ -97,7 +97,7 @@ function App() {
             href="https://github.com/EduardoLariosEspinoza/Personal-Website"
             target="_blank"
           >
-            See This Repo
+            GitHub Repo
           </a>
         </div>
         <div>
