@@ -2,7 +2,7 @@ import { Project } from "../types";
 import PersonalImg from "../assets/images/Personal-Website.jpeg";
 import FlagImg from "../assets/images/Flag-Trivia-Game-Web-Page-Image.jpeg";
 import UniRegImg from "../assets/images/University-Registration-Website-Img.jpeg";
-import VetFullStackImg from "../assets/images/Full-Stack-Veterinarian-Website-Img.jpeg";
+import NotesFullStackImg from "../assets/images/Notes-Page-Img.jpeg";
 import LoanVueImg from "../assets/images/Loan-quoter-with-Vue-Img.jpeg";
 import VetReactImg from "../assets/images/Vet-Page-React.jpeg";
 
@@ -35,15 +35,12 @@ export const projects: Project[] = [
     isAvailable: false,
   },
   {
-    title: "Full Stack Veterinarian Website",
+    title: "Full Stack Notes Website",
     description:
-      "This project is a web application simulating a veterinarian's platform, designed to facilitate the registration of pets for appointments and enable veterinarians to manage their patient records. Developed using Node.js, React.js, MongoDB, Tailwind CSS, and Express, the application features email-based registration implemented through MailTrap, ensuring efficient and secure user onboarding.",
-    img: VetFullStackImg,
-    repoUrl: [
-      "https://github.com/EduardoLariosEspinoza/apv-frontend",
-      "https://github.com/EduardoLariosEspinoza/apv-backend",
-    ],
-    webUrl: "https://apv-frontend-i8vy.vercel.app/",
+      "This project is a full-stack web application that simulates a notes platform. It allows you to view, create, edit, delete, and archive/unarchive notes. It has two views: archived notes and unarchived notes. The application uses React.js, Node.js, MySQL, and Tailwind. You can start it by executing a script file in its GitHub repo.",
+    img: NotesFullStackImg,
+    repoUrl: ["https://github.com/EduardoLariosEspinoza/FullStack-Notes-Page"],
+    webUrl: "",
     isAvailable: true,
   },
   {

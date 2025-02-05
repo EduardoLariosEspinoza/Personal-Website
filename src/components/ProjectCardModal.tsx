@@ -44,13 +44,15 @@ function ProjectCardModal({ onClose, project, isOpen }: ProjectCardModalProps) {
         />
         {project.isAvailable ? (
           <>
-            <p>
-              Visit The Page{" "}
-              <a href={project.webUrl} target="_blank">
-                {" "}
-                Here!
-              </a>
-            </p>
+            {project.webUrl != "" && (
+              <p>
+                Visit The Page{" "}
+                <a href={project.webUrl} target="_blank">
+                  {" "}
+                  Here!
+                </a>
+              </p>
+            )}
             <div>
               {project.repoUrl.map((repo) => {
                 return (

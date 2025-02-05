@@ -27,7 +27,7 @@ import {
   ExperiencesContainer,
   ExperiencesDiv,
 } from "./styles/AppStyles.tsx";
-import CV from "/CV_en-Nov-2024.pdf";
+import CV from "/CV_en.pdf";
 import githubLogo from "/github-logo.png";
 import linkedInLogo from "/logo-linkedin.png";
 import webDevImg from "./assets/images/Web-Dev.jpg";
