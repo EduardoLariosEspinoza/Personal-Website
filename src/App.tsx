@@ -16,7 +16,6 @@ import {
   Cards,
   AboutInfo,
   AboutContainer,
-  AboutImgDiv,
   BulletedListContainer,
   FormContainer,
   EmailForm,
@@ -31,7 +30,6 @@ import CV from "/CV_en.pdf";
 import githubLogo from "/github-logo.png";
 import linkedInLogo from "/logo-linkedin.png";
 import webDevImg from "./assets/images/Web-Dev.jpg";
-import aboutImg from "./assets/images/javascript.jpg";
 import TitleTextDiv from "./components/TitleTextDiv.tsx";
 
 function App() {
@@ -114,7 +112,7 @@ function App() {
           <p>elariosespinoza2@gmail.com</p>
         </InfoContainer>
         <WebDevImage>
-          <img src={webDevImg} alt="Volleyball Ball" />
+          <img src={webDevImg} alt="Intro" />
         </WebDevImage>
       </IntroContainer>
 
@@ -135,9 +133,6 @@ function App() {
               testing, mainly.
             </p>
           </AboutInfo>
-          <AboutImgDiv>
-            <img src={aboutImg} alt="" />
-          </AboutImgDiv>
         </div>
       </AboutContainer>
 
