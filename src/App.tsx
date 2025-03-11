@@ -246,7 +246,7 @@ function App() {
         <h2>Socials</h2>
         <div>
           <a
-            href="https://www.linkedin.com/in/eduardo-larios-espinoza-216185242/"
+            href="https://www.linkedin.com/in/eduardo-larios-216185242/"
             target="_blank"
           >
             <img src={linkedInLogo} alt="LinkedIn Logo" />
